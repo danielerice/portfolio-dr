@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { GridContext } from "../contexts/GridContext";
 
 //creates wave from click site and returns to original opacity
-const FadeIn = (e) => {
+function FadeIn (e) {
 
     const {GRID_HEIGHT, GRID_WIDTH} = useContext(GridContext);
 
