@@ -10,11 +10,4 @@ function WaterDropGrid () {
   );
 };
 
-
-
-
-
-
-
-
 export default WaterDropGrid;
