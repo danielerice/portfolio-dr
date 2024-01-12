@@ -1,9 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useRef } from "react";
+import { HashLink } from "react-router-hash-link";
+import Bio from "./Bio";
+import Projects from "./Projects";
 
-function NavBar () {
+function NavBar ({bio, projects}) {
+
+    function scrollToSection(section) {
+        window.scrollTo({
+            top: section.current.offsetTop,
+            behavior: "smooth"
+        })
+    }
     return (
-        <nav class="bg-gray-800">
+        <nav class="bg-black">
             <div class="mx-auto">
                 <div class="relative flex h-16 items-center justify-between">
                     <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -24,9 +33,9 @@ function NavBar () {
                         <div class="hidden sm:ml-6 sm:block">
                             <div class="flex space-x-4">
                                 {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                                <Link to="/" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</Link>
-                                <Link to="/projects" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</Link>
-                                <Link to="/bio" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Bio</Link>
+                                <button onClick={() => scrollToSection()} class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</button>
+                                <button onClick={() => scrollToSection(bio)} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Bio</button>
+                                <button onClick={() => scrollToSection(projects)} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</button>
                             </div>
                         </div>
                     </div>
@@ -37,9 +46,8 @@ function NavBar () {
             <div  id="dropdown" class="sm:hidden">
                 <div class="space-y-1 px-2 pb-3 pt-2">
                     {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                    <Link to="/" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</Link>
-                    <Link href="/projects" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</Link>
-                    <Link href="/bio" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Bio</Link>
+                    <button class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</button>
+                    <button class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Bio</button>
                 </div>
             </div>
         </nav>

@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useRef} from "react";
 
-function Projects () {
+function Projects ({projects}) {
+
     return (
-        <div>
+        <div ref={projects} style={{paddingTop: "1000px"}}>
             <p>Projects</p>
         </div>
     )
