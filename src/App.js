@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Projects from "./components/Projects"
 import {Route, Routes} from "react-router-dom"
 import WaterDropGrid from './components/WaterDropGrid';
+import Bio from './components/Bio';
 
 function App() {
   return (
@@ -14,19 +15,25 @@ function App() {
       <Routes>
         
         <Route 
-          path="/"
+          exact path="/"
           element={
             <Home/>
         }
         />
 
         <Route 
-          path="/store"
+          path="/projects"
           element={
             <Projects/>
         }
         />
 
+        <Route 
+          path="/bio"
+          element={
+            <Bio/>
+        }
+        />
       </Routes>
     </div>
   );

@@ -1,11 +1,22 @@
 import React from "react";
 import { useContext } from "react";
 import { GridContext } from "../contexts/GridContext";
+import Dissapear from "../animations/Dissapear";
+import FadeIn from "../animations/FadeIn";
 
 
 function DotGrid () {
 
     const {GRID_HEIGHT, GRID_WIDTH} = useContext(GridContext)
+
+    function conditonalFadeClick (e) {
+    
+        if ( e.target.style.opacity > 0 ) {
+            Dissapear(e)
+        } else {
+            FadeIn(e)
+        }
+    }
 
     const dots = [];
     let index = 0;

@@ -1,11 +1,9 @@
-import React from "react";
 import anime from "animejs";
-import { useContext } from "react";
-import { GridContext } from "../contexts/GridContext";
 
 function Dissapear (e) {
 
-    const {GRID_HEIGHT, GRID_WIDTH} = useContext(GridContext);
+    const GRID_WIDTH = 60;
+    const GRID_HEIGHT = 30;
 
     //handles dot animations
     anime({
@@ -24,7 +22,7 @@ function Dissapear (e) {
         ],
         delay: anime.stagger(100, {
           grid: [GRID_WIDTH, GRID_HEIGHT],
-          from: e.target.dataset.index,
+          from: 'center',
         }),
       });
       //handles the fade out of divs
@@ -36,7 +34,7 @@ function Dissapear (e) {
         ],
         delay: anime.stagger(100, {
           grid: [GRID_WIDTH, GRID_HEIGHT],
-          from: e.target.dataset.index,
+          from: 'center',
         }),
       });
 };
