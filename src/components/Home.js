@@ -4,79 +4,13 @@ import NavBar from "./NavBar";
 
 function Home () {
     return (
-        <div>
-            
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 z-0">
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img
-            className="mx-auto h-10 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt="Your Company"
-          />
-          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Sign in to your account
-          </h2>
-        </div>
-
-        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                Email address
-              </label>
-              <div className="mt-2">
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
-
-            <div>
-              <div className="flex items-center justify-between">
-                <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                  Password
-                </label>
-                <div className="text-sm">
-                  <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                    Forgot password?
-                  </a>
-                </div>
-              </div>
-              <div className="mt-2">
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  autoComplete="current-password"
-                  required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
-
-            <div>
-              <button
-                type="submit"
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Sign in
-              </button>
-            </div>
-          </form>
-
-          <p className="mt-10 text-center text-sm text-gray-500">
-            Not a member?{' '}
-            <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-              Start a 14 day free trial
-            </a>
-          </p>
-        </div>
-      </div>
+        <div className="container mx-auto py-56 text-center relative">
+            <p className="text-center sm:text-left ml-20 text-xs sm:visible sm:text-s md:text-xl cursor-default">Hi, I'm Daniel,</p>
+            <h1 className="subpixel-antialiased cursor-default py-3 text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl ">Software Developer</h1>
+            <h1 className="subpixel-antialiased cursor-default py-3 text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl ">and Lifelong Learner</h1>
+            <p className="text-right px-40 invisible sm:visible text-xs sm:text-m md:text-xl cursor-default">I like building things</p>
+            <p className="text-right px-20 invisible text-xs sm:visible sm:text-m md:text-xl cursor-default">connecting with people</p>
+            <p className="text-right px-10 invisible text-xs sm:visible sm:text-m md:text-xl cursor-default">and solving puzzles</p>
         </div>
     )
 };
