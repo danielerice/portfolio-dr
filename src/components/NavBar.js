@@ -3,7 +3,7 @@ import { HashLink } from "react-router-hash-link";
 import Bio from "./Bio";
 import Projects from "./Projects";
 
-function NavBar ({bio, projects}) {
+function NavBar ({bio, projects, contact}) {
 
     function scrollToSection(section) {
         window.scrollTo({
@@ -21,6 +21,7 @@ function NavBar ({bio, projects}) {
                                 {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                                 <button onClick={() => scrollToSection(bio)} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Bio</button>
                                 <button onClick={() => scrollToSection(projects)} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</button>
+                                <button onClick={() => scrollToSection(contact)} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</button>
                             </div>
                         </div>
                     </div>
