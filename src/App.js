@@ -1,5 +1,4 @@
 import './index.css'
-import './App.css';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Projects from "./components/Projects"
@@ -8,6 +7,8 @@ import {Route, Routes} from "react-router-dom"
 import Bio from './components/Bio';
 import { useRef } from 'react';
 import TopButton from './components/TopButton';
+import starryBG from './assets/StarryBG.mov'
+
 
 function App() {
   const bio = useRef(null)
@@ -17,13 +18,44 @@ function App() {
 
   return (
     <div>
+      <video 
+        src={starryBG} 
+        autoPlay 
+        loop 
+        muted
+      />
       <NavBar key={'navBar'} bio={bio} projects={projects} contact={contact}/>
-      <TopButton/>
-      {/* <WaterDropGrid/> */}
-      <Home id="home"/>
-      <Bio id="bio" bio={bio}/>
-      <Projects id="projects" projects={projects}/>
-      <Contact id="contact" contact={contact}/>
+      <Routes>
+
+        <Route
+          path='/'
+          element={
+            <Home id="home"/>
+          }
+        />
+        
+        <Route
+          path='/bio'
+          element={
+            <Bio id="bio" bio={bio}/>
+          }
+        />
+
+        <Route
+          path='/projects'
+          element={
+            <Projects id="projects" projects={projects}/>
+          }
+        />
+
+        <Route
+        path='/contact'
+        element={
+          <Contact id="contact" contact={contact}/>
+        }
+        />
+        
+      </Routes>
     </div>
   );
 }
