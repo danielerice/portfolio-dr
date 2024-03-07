@@ -4,17 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import { GridProvider } from './contexts/GridContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <GridProvider>
+
     <BrowserRouter>
       <React.StrictMode>
         <App />
       </React.StrictMode>
     </BrowserRouter>
-  </GridProvider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function

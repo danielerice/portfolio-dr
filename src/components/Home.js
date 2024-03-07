@@ -1,5 +1,4 @@
 import React from "react";
-import WaterDropGrid from "./WaterDropGrid";
 import NavBar from "./NavBar";
 
 function Home () {

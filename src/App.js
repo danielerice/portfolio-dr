@@ -5,7 +5,6 @@ import Home from './components/Home';
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
 import {Route, Routes} from "react-router-dom"
-import WaterDropGrid from './components/WaterDropGrid';
 import Bio from './components/Bio';
 import { useRef } from 'react';
 import TopButton from './components/TopButton';
