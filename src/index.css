@@ -9,16 +9,27 @@ code {
     monospace;
 }
 
-#navContainer {
-  background: linear-gradient(rgba(255, 255, 255, .5), rgb(255, 255, 255, 0));
-  height: 10vh;
-  width: 100%;
-  flex-direction: row;
-  
-}
 *{
   margin: 0;
   padding: 0;
+}
+
+/* Background */
+video {
+  width: 100%;
+  height: 100vh;
+  z-index: -4;
+  object-fit: cover;
+}
+
+
+/* NavBar */
+#navContainer {
+  background: linear-gradient(rgba(0, 0, 0, 0.672), rgba(0, 0, 0, 0.11));
+  height: 10vh;
+  width: 100%;
+  flex-direction: row;
+  z-index: +2;
 }
 
 .sticky {
@@ -27,17 +38,7 @@ code {
   width: 100%;
 }
 
-video {
-  width: 100%;
-  height: 100vh;
-  z-index: -2;
-  object-fit: cover;
-}
-
-
-
-
-/* Dropdown Button */
+/* Dropdown menu */
 .dropbtn {
   background-color: #588ecf;
   border: none;
@@ -46,24 +47,17 @@ video {
   box-sizing: border-box;
   color: #0d172a;
   cursor: pointer;
-  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 1.1rem;
-  font-weight: 600;
   line-height: 1;
   padding: 1rem 1.6rem;
-  text-align: center;
-  text-decoration: none #0d172a solid;
-  text-decoration-thickness: auto;
   transition: all .1s cubic-bezier(.4, 0, .2, 1);
   box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
   user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
   border-radius: 10%;
 }
 
 .dropbtn:hover {
-  background-color: #1e293b;
+  background-color: #3671ba;
   color: #fff;
 }
 
@@ -78,6 +72,7 @@ video {
 .dropdown {
   position: relative;
   display: inline-block;
+  z-index: +2;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -110,4 +105,38 @@ video {
 .burger {
   height: 1rem;
   width: 1rem;
+}
+
+/* Bio */
+.bioContainer {
+  position: absolute;
+  top: 30%;
+  background: rgba(0, 0, 0, 0.536);
+  max-width: 50%;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  left: 25%;
+  height: max-content;
+  border-radius: 10%;
+}
+
+.blurb{
+  margin-top: 10%;
+  opacity: 1;
+}
+
+.bioP {
+  opacity: initial;
+  font-size: x-large;
+  color: rgba(173, 208, 240, 255);
+}
+
+.me {
+  max-width: 80vh;
+  height: 60vh;
+  float: right;
+  border-radius: 20%;
+  margin-right: -5%;
 }

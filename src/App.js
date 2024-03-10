@@ -7,8 +7,6 @@ import {Route, Routes} from "react-router-dom"
 import Bio from './components/Bio';
 import { useRef } from 'react';
 import TopButton from './components/TopButton';
-import starryBG from './assets/StarryBG.mov'
-import Background from './components/Background';
 
 
 function App() {
@@ -19,7 +17,6 @@ function App() {
 
   return (
     <div>
-      <Background/>
       <NavBar key={'navBar'}/>
       <Routes>
 

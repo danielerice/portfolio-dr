@@ -7,11 +7,11 @@ function NavBar () {
     return (
         <div className="sticky" id="navContainer">
                 <div className="dropdown" style={{float: "right"}}>
-                    <button className="dropbtn"><img src={BurgerIcon} className="burger"/></button>
+                    <button className="dropbtn" role="button"><img src={BurgerIcon} className="burger"/></button>
                     <div className="dropdown-content">
-                        <Link to="/projects">Link 1</Link>
-                        <Link to="/bio">Link 2</Link>
-                        <Link to="/contact">Link 3</Link>
+                        <Link to="/projects">projects</Link>
+                        <Link to="/bio">bio</Link>
+                        <Link to="/contact">contact</Link>
                     </div>
                 </div>
         </div>
