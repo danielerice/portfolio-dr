@@ -8,6 +8,7 @@ import Bio from './components/Bio';
 import { useRef } from 'react';
 import TopButton from './components/TopButton';
 import starryBG from './assets/StarryBG.mov'
+import Background from './components/Background';
 
 
 function App() {
@@ -18,13 +19,8 @@ function App() {
 
   return (
     <div>
-      <video 
-        src={starryBG} 
-        autoPlay 
-        loop 
-        muted
-      />
-      <NavBar key={'navBar'} bio={bio} projects={projects} contact={contact}/>
+      <Background/>
+      <NavBar key={'navBar'}/>
       <Routes>
 
         <Route
@@ -37,14 +33,14 @@ function App() {
         <Route
           path='/bio'
           element={
-            <Bio id="bio" bio={bio}/>
+            <Bio id="bio"/>
           }
         />
 
         <Route
           path='/projects'
           element={
-            <Projects id="projects" projects={projects}/>
+            <Projects id="projects"/>
           }
         />
 
