@@ -6,11 +6,12 @@ function NavBar () {
 
     return (
         <div className="sticky" id="navContainer">
+                <p className="navBlurb" style={{float: "left"}}>Daniel Rice //JavaScript - React//Ruby - Rails//</p>
                 <div className="dropdown" style={{float: "right"}}>
                     <button className="dropbtn" role="button"><img src={BurgerIcon} className="burger"/></button>
                     <div className="dropdown-content">
+                        <Link to="/">bio</Link>
                         <Link to="/projects">projects</Link>
-                        <Link to="/bio">bio</Link>
                         <Link to="/contact">contact</Link>
                     </div>
                 </div>

@@ -2,6 +2,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+    background-color: #588ecf;
 }
 
 code {
@@ -26,7 +27,7 @@ video {
 /* NavBar */
 #navContainer {
   background: linear-gradient(rgba(0, 0, 0, 0.672), rgba(0, 0, 0, 0.11));
-  height: 10vh;
+  height: fit-content;
   width: 100%;
   flex-direction: row;
   z-index: +2;
@@ -38,9 +39,12 @@ video {
   width: 100%;
 }
 
+
 /* Dropdown menu */
 .dropbtn {
   background-color: #588ecf;
+  margin-top: .5rem;
+  margin-right: .5rem;
   border: none;
   opacity: .9;
   display: inline-block;
@@ -54,6 +58,13 @@ video {
   user-select: none;
   touch-action: manipulation;
   border-radius: 10%;
+}
+
+.navBlurb {
+  color: white;
+  line-height: 4rem;
+  font-size: xx-large;
+  margin-left: 3rem;
 }
 
 .dropbtn:hover {
@@ -112,17 +123,17 @@ video {
   position: absolute;
   top: 30%;
   background: rgba(0, 0, 0, 0.536);
-  max-width: 50%;
+  max-width: 80%;
   display: flex;
   flex-flow: row;
   flex-wrap: nowrap;
   justify-content: center;
-  left: 25%;
+  left: 10%;
   height: max-content;
-  border-radius: 10%;
+  border-radius: 2%;
 }
 
-.blurb{
+.blurb {
   margin-top: 10%;
   opacity: 1;
 }
@@ -137,6 +148,6 @@ video {
   max-width: 80vh;
   height: 60vh;
   float: right;
-  border-radius: 20%;
-  margin-right: -5%;
+  border-radius: 5%;
+  margin-right: -15%;
 }
