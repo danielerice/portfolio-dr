@@ -12,7 +12,7 @@ function Bio () {
             <Background/>
             <div className="bioContainer">
                 <div className="blurbs-container">
-                    <h1 className="bio-header">~ABOUT ME~</h1>
+                    <h1 className="bio-header">Welcome!</h1>
                     <div className="imgContainer">
                         <img src={Me} alt="Me" className="me"/>
                     </div>

@@ -6,7 +6,7 @@ function NavBar () {
 
     return (
         <div className="sticky" id="navContainer">
-                <p className="navBlurb" style={{float: "left"}}>Daniel Rice //JavaScript - React//Ruby - Rails//</p>
+                <p className="navBlurb" style={{float: "left", fontWeight: 600}}>Daniel Rice - Software Developer</p>
                 <div className="dropdown" style={{float: "right"}}>
                     <button className="dropbtn" role="button"><img src={BurgerIcon} className="burger"/></button>
                     <div className="dropdown-content">
