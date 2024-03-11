@@ -13,6 +13,9 @@ function Bio () {
             <div className="bioContainer">
                 <div className="blurbs-container">
                     <h1 className="bio-header">~ABOUT ME~</h1>
+                    <div className="imgContainer">
+                        <img src={Me} alt="Me" className="me"/>
+                    </div>
                     <div className="blurb">
                         <p className="bioP">Experienced Coast Guard veteran, classically trained chef,
                          and eager full-stack web developer proficient in JavaScript and Ruby. 
@@ -45,9 +48,6 @@ function Bio () {
                             <img src={LinkedInLogo} className="icon"/>
                         </a>
                     </div>
-                </div>
-                <div className="imgContainer">
-                    <img src={Me} alt="Me" className="me"/>
                 </div>
             </div>
         </>
