@@ -1,5 +1,5 @@
 import React from "react";
-import starryBG from "../assets/StarryBG.mov";
+import starryBG from "../assets/StarryBG.png";
 
 function Background() {
     return (
