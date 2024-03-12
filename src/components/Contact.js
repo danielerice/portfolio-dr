@@ -1,5 +1,4 @@
 import React from "react";
-import Background from "./Background"
 import { useForm, ValidationError } from '@formspree/react';
 
 function Contact() {
@@ -68,17 +67,14 @@ function Contact() {
     )
 
     return (
-        <>
-            <Background/>
-            <div className="contact-card">
-                <div className="card-heading">
-                    <h2/>Let's stay in touch!<h2/>
-                    <small>Phone: 206-755-2605
-                    ||   Email: danielrice5627@gmail.com</small>
-                </div>
-                { state.succeeded ? <p>Thanks for joining!</p> : contactForm }
+        <div className="contact-card">
+            <div className="card-heading">
+                <h2/>Let's stay in touch!<h2/>
+                <small>Phone: 206-755-2605
+                ||   Email: danielrice5627@gmail.com</small>
             </div>
-        </>
+            { state.succeeded ? <p>Thanks for joining!</p> : contactForm }
+        </div>
     )
 }
 
