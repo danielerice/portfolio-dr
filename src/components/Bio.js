@@ -1,5 +1,4 @@
 import React from "react";
-import Me from "../assets/Me.png"
 import Background from "./Background";
 import GitHubLogo from "../assets/GitHubLogo.svg"
 import LinkedInLogo from "../assets/LinkedInLogo.svg"
@@ -13,9 +12,6 @@ function Bio () {
             <div className="bioContainer">
                 <div className="blurbs-container">
                     <h1 className="bio-header">Welcome!</h1>
-                    <div className="imgContainer">
-                        <img src={Me} alt="Me" className="me"/>
-                    </div>
                     <div className="blurb">
                         <p className="bioP">Experienced Coast Guard veteran, classically trained chef,
                          and eager full-stack web developer proficient in JavaScript and Ruby. 

@@ -10,9 +10,9 @@ function NavBar () {
                 <div className="dropdown" style={{float: "right"}}>
                     <button className="dropbtn" role="button"><img src={BurgerIcon} className="burger"/></button>
                     <div className="dropdown-content">
-                        <Link to="/">bio</Link>
-                        <Link to="/projects">projects</Link>
-                        <Link to="/contact">contact</Link>
+                        <Link to="/">Bio</Link>
+                        <Link to="/projects">Projects</Link>
+                        <Link to="/contact">Contact</Link>
                     </div>
                 </div>
         </div>
