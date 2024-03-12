@@ -22,7 +22,7 @@ function Projects ({projects}) {
                         >
                             <img src={GitHubLogo} className="project-icon"/>
                         </a>
-                        <a href="https://www.loom.com/share/af0489adeb784b2d908fcfdb845306e2?sid=ca14765e-922b-466a-8fc5-1b2e0558c9fe" className="link">
+                        <a href="https://www.loom.com/share/af0489adeb784b2d908fcfdb845306e2?sid=ca14765e-922b-466a-8fc5-1b2e0558c9fe" className="link" target="_blank">
                             Demo
                         </a>
                     </div>
@@ -43,7 +43,7 @@ function Projects ({projects}) {
                         >
                             <img src={GitHubLogo} className="project-icon"/>
                         </a>
-                        <a href="https://www.loom.com/share/64f2617a835546b0972b6fdf990efa5d?sid=9a7eeb0e-65d0-4eef-ad2c-5db75463a0af" className="link">
+                        <a href="https://www.loom.com/share/64f2617a835546b0972b6fdf990efa5d?sid=9a7eeb0e-65d0-4eef-ad2c-5db75463a0af" className="link" target="_blank">
                             Demo
                         </a>
                     </div>
@@ -56,7 +56,7 @@ function Projects ({projects}) {
                     <h5 >My Personal Blog</h5>
                     <p >Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
                     <div className="project-links">
-                        <a href="https://medium.com/@danielrice5627" className="link">
+                        <a href="https://medium.com/@danielrice5627" className="link" target="_blank">
                             Link
                         </a>
                     </div>
