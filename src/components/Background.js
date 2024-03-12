@@ -6,6 +6,7 @@ function Background() {
         <div>
             <img
             src={starryBG}
+            className="bg-img"
             />
         </div>
     );

@@ -38,7 +38,7 @@ function Bio () {
                             className="resume"
                             target="_blank"
                             href="https://www.dropbox.com/scl/fi/4s08r3e22lqabb31gtz7b/Daniel-Rice-s-Resume.pdf?rlkey=wmne178mmn74jf3vrdbiughq0&dl=0"
-                        >CV<img src={Open} className="open"/></a>
+                        >CV</a>
                         <a
                             rel="apple-touch-icon"
                             href="https://www.linkedin.com/in/daniel-rice-1406a52a3/"

@@ -26,11 +26,12 @@ input {
 @media screen and (min-width: 320px) {
   
   /* Background */
-  img {
+  .bg-img {
     width: 100%;
     height: 100vh;
     z-index: -4;
     object-fit: cover;
+    background-repeat: repeat-x;
   }
 
   /* NavBar */
@@ -318,11 +319,12 @@ input {
 @media screen and (min-width: 768px) {
   
   /* Background */
-  video {
+  .bg-img {
     width: 100%;
     height: 100vh;
     z-index: -4;
     object-fit: cover;
+    background-repeat: repeat-x;
   }
 
 
@@ -615,11 +617,12 @@ input {
 @media screen and (min-width: 1024px) {
   
   /* Background */
-  video {
+  .bg-img {
     width: 100%;
     height: 100vh;
     z-index: -4;
     object-fit: cover;
+    background-repeat: repeat-x;
   }
 
 
@@ -911,14 +914,12 @@ input {
 
 @media screen and (min-width: 1200px) {
 
-  /* Background */
-  video {
+  .bg-img {
     width: 100%;
     height: 100vh;
     z-index: -4;
     object-fit: cover;
   }
-
 
   /* NavBar */
   #navContainer {
@@ -1204,6 +1205,35 @@ input {
 
   .action-button:hover {
     background-color: #3671ba;
+  }
+
+  /* Projects */
+  .projects-container {
+    top: 20%;
+    left: 10%;
+    right: 10%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    width: 80%;
+  }
+
+  .project-card {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 50%;
+    background-color: #ffffffc5;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(#999, .25);
+    padding: .75rem;
+  }
+
+  .project-card img {
+    height: 100%;
+    width: 100%;
   }
 
 }
