@@ -4,11 +4,8 @@ import starryBG from "../assets/StarryBG.png";
 function Background() {
     return (
         <div>
-            <video
-            src={starryBG} 
-            autoPlay 
-            loop 
-            muted
+            <img
+            src={starryBG}
             />
         </div>
     );
