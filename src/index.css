@@ -29,7 +29,24 @@ input, select, textarea{
   color: white;
 }
 
+.dropbtn:focus {
+  background-color: #3671ba;
+  color: #fff;
+}
 
+.thank-you-message {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  text-align: center;
+  font-size: large;
+  text-decoration: underline;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:focus {background-color: #7face4;}
+
+/* Show the dropdown menu on hover */
+.dropdown:focus .dropdown-content {display: block;}
 
 /* Global Form style */
 input {
@@ -1251,10 +1268,10 @@ a {
   }
 
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #7face4;}
+  .dropdown-content a:focus {background-color: #7face4;}
 
   /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
+  .dropdown-content.show {display: block;}
 
 
   .burger {

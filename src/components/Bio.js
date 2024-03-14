@@ -23,22 +23,25 @@ function Bio () {
                         rel="apple-touch-icon"
                         href="https://github.com/danielerice"
                         target="_blank"
-                        type="image/png" 
+                        type="image/png"
+                        role="external link to my Github page"
                     >
-                        <img src={GitHubLogo} className="icon"/>
+                        <img src={GitHubLogo} className="icon" alt="the Github logo"/>
                     </a>
                     <a
                         className="resume"
                         target="_blank"
                         href="https://www.dropbox.com/scl/fi/4s08r3e22lqabb31gtz7b/Daniel-Rice-s-Resume.pdf?rlkey=wmne178mmn74jf3vrdbiughq0&dl=0"
+                        role="link to a PDF of my CV/resume"
                     >CV</a>
                     <a
                         rel="apple-touch-icon"
                         href="https://www.linkedin.com/in/daniel-rice-1406a52a3/"
                         target="_blank"
                         type="image/png" 
+                        role="external link to my LinkedIn profile"
                     >
-                        <img src={LinkedInLogo} className="icon"/>
+                        <img src={LinkedInLogo} className="icon" alt="the LinkedIn logo"/>
                     </a>
                 </div>
             </div>

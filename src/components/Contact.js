@@ -14,6 +14,7 @@ function Contact() {
                     id="name"
                     type="text"
                     name="name"
+                    role="input field for your name"
                 />
                 <label htmlFor="email" className="input-label">
                     Name:
@@ -26,11 +27,12 @@ function Contact() {
             </div>
             <div className="input">
                 <input
-                    placeholder="example@soemthing.com"
+                    placeholder="example@something.com"
                     className="input-field"
                     id="email"
                     type="email" 
                     name="email"
+                    role="input field for your email address"
                 />
                 <label htmlFor="email" className="input-label">
                     Email Address:
@@ -48,6 +50,7 @@ function Contact() {
                     id="message"
                     type="text"
                     name="message"
+                    role="text area input for your message to me"
                 />
                 <ValidationError 
                     prefix="Message" 
@@ -73,7 +76,7 @@ function Contact() {
                 <small>Phone: 206-755-2605
                 ||   Email: danielrice5627@gmail.com</small>
             </div>
-            { state.succeeded ? <p>Thanks for joining!</p> : contactForm }
+            { state.succeeded ? <p className="thank-you-message"><b>Thanks for Reaching out! I'll get back to you as soon as I can.</b></p> : contactForm }
         </div>
     )
 }

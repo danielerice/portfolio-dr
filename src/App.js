@@ -4,15 +4,9 @@ import Projects from "./components/Projects"
 import Contact from "./components/Contact"
 import {Route, Routes} from "react-router-dom"
 import Bio from './components/Bio';
-import { useRef } from 'react';
-import TopButton from './components/TopButton';
 
 
 function App() {
-  const bio = useRef(null)
-  const projects = useRef(null)
-  const contact = useRef(null)
-
 
   return (
     <div>
@@ -36,7 +30,7 @@ function App() {
         <Route
         path='/contact'
         element={
-          <Contact id="contact" contact={contact}/>
+          <Contact id="contact"/>
         }
         />
         

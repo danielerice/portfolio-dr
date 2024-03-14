@@ -9,9 +9,9 @@ function Projects ({projects}) {
     return (
         <div className="projects-container">
             <div className="project-card">
-                <img src={GPT} alt="GPT"/>
+                <img src={GPT} alt="an image of the landing page to the GPTQuest site"/>
                 <div >
-                    <h5 >GPT Quest</h5>
+                    <h5>GPT Quest</h5>
                     <p >I used React, Rails and OpenAi's API to create this browser based game</p>
                     <div className="project-links">
                         <a
@@ -19,10 +19,11 @@ function Projects ({projects}) {
                             href="https://github.com/danielerice/GPTQuest"
                             target="_blank"
                             type="image/png" 
+                            role="external link to GPTQuest GitHub page"
                         >
                             <img src={GitHubLogo} className="project-icon"/>
                         </a>
-                        <a href="https://www.loom.com/share/af0489adeb784b2d908fcfdb845306e2?sid=ca14765e-922b-466a-8fc5-1b2e0558c9fe" className="link" target="_blank">
+                        <a href="https://www.loom.com/share/af0489adeb784b2d908fcfdb845306e2?sid=ca14765e-922b-466a-8fc5-1b2e0558c9fe" className="link" target="_blank" role="external link to video demo">
                             Demo
                         </a>
                     </div>
@@ -30,7 +31,7 @@ function Projects ({projects}) {
             </div>
 
             <div className="project-card">
-                <img src={Codex} alt="" />
+                <img src={Codex} alt="an image of the landing page for the Recipe Codex site" />
                 <div >
                     <h5 >Recipe Codex</h5>
                     <p >This site utilizes React Ruby and Bootstrap to efficiently organize recipes</p>
@@ -40,10 +41,11 @@ function Projects ({projects}) {
                             href="https://github.com/danielerice/Recipe-Codex"
                             target="_blank"
                             type="image/png" 
+                            role="external link to Recipe Codex GitHub page"
                         >
                             <img src={GitHubLogo} className="project-icon"/>
                         </a>
-                        <a href="https://www.loom.com/share/64f2617a835546b0972b6fdf990efa5d?sid=9a7eeb0e-65d0-4eef-ad2c-5db75463a0af" className="link" target="_blank">
+                        <a href="https://www.loom.com/share/64f2617a835546b0972b6fdf990efa5d?sid=9a7eeb0e-65d0-4eef-ad2c-5db75463a0af" className="link" target="_blank" role="external link to video demo">
                             Demo
                         </a>
                     </div>
@@ -51,12 +53,12 @@ function Projects ({projects}) {
             </div>
 
             <div className="project-card">
-                <img src={Medium} alt="" />
+                <img src={Medium} alt="an Image of the Medium.com logo" />
                 <div>
                     <h5 >My Personal Blog</h5>
                     <p >Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
                     <div className="project-links">
-                        <a href="https://medium.com/@danielrice5627" className="link" target="_blank">
+                        <a href="https://medium.com/@danielrice5627" className="link" target="_blank" role="an external link to my Medium.com blog">
                             Link
                         </a>
                     </div>
