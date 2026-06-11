@@ -1,24 +1,34 @@
-import React, {useState} from "react";
-import { Link } from "react-router-dom";
-import BurgerIcon from "../assets/BurgerIcon.svg"
+import { NavLink } from 'react-router-dom';
 
-function NavBar () {
+const LINKS = [
+  { to: '/', label: 'HOME', end: true },
+  { to: '/projects', label: 'PROJECTS' },
+  { to: '/contact', label: 'CONTACT' },
+];
 
-    const [show ,setShow] = useState(false);
-
-    return (
-        <div className="sticky" id="navContainer">
-                <p className="navBlurb" style={{float: "left", fontWeight: 600}}>Daniel Rice - Software Developer</p>
-                <div className="dropdown" style={{float: "right"}}>
-                    <button onClick={() => setShow(!show)} className="dropbtn" role="navagation menu toggle"><img src={BurgerIcon} className="burger"/></button>
-                    <div className={ show ? "dropdown-content show" : "dropdown-content"}>
-                        <Link to="/" role="internal link to bio">Bio</Link>
-                        <Link to="/projects" role="internal link to projects">Projects</Link>
-                        <Link to="/contact" role="internal link to Contact info">Contact</Link>
-                    </div>
-                </div>
-        </div>
-    )
+export default function NavBar() {
+  return (
+    <header className="navbar">
+      <div className="nav-brand">
+        <span className="nav-led" aria-hidden="true" />
+        <span className="nav-name">DANIEL&nbsp;RICE</span>
+        <span className="nav-sub">SOFTWARE.DEV</span>
+      </div>
+      <nav className="nav-links" aria-label="Primary">
+        {LINKS.map((link) => (
+          <NavLink
+            key={link.to}
+            to={link.to}
+            end={link.end}
+            className={({ isActive }) => `nav-link${isActive ? ' is-active' : ''}`}
+          >
+            <span className="nav-caret" aria-hidden="true">
+              ▸
+            </span>
+            {link.label}
+          </NavLink>
+        ))}
+      </nav>
+    </header>
+  );
 }
-
-export default NavBar;

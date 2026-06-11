@@ -1,0 +1,107 @@
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: var(--c-bg-deep);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.splash-screen {
+  width: min(640px, 88vw);
+  font-family: var(--font-display);
+}
+
+.boot-log {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 280px;
+}
+
+.boot-line {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--c-text);
+  animation: boot-line-in 0.12s steps(2) backwards;
+}
+
+@keyframes boot-line-in {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+}
+
+.boot-ok {
+  color: var(--c-cyan);
+}
+
+.boot-launch {
+  color: var(--c-yellow);
+  margin-top: 10px;
+}
+
+.boot-progress {
+  height: 16px;
+  border: 2px solid var(--c-panel);
+  padding: 2px;
+  margin-top: 12px;
+}
+
+.boot-progress-fill {
+  height: 100%;
+  width: 0;
+  background: repeating-linear-gradient(90deg, var(--c-cyan) 0 8px, transparent 8px 10px);
+  animation: boot-fill 0.6s steps(12) forwards;
+}
+
+@keyframes boot-fill {
+  to {
+    width: 100%;
+  }
+}
+
+.splash-skip {
+  font-size: 9px;
+  color: var(--c-dim);
+  text-align: center;
+  margin-top: 44px;
+  animation: caret-blink 1.4s steps(1) infinite;
+}
+
+/* CRT power-off: collapse to a bright horizontal line, then a dot */
+.splash-exit {
+  animation: splash-fade 0.45s steps(8) forwards;
+}
+
+.splash-exit .splash-screen {
+  animation: crt-off 0.45s steps(8) forwards;
+}
+
+@keyframes crt-off {
+  0% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  45% {
+    transform: scale(1.04, 0.02);
+    filter: brightness(3);
+  }
+  100% {
+    transform: scale(0.001, 0.002);
+    filter: brightness(6);
+  }
+}
+
+@keyframes splash-fade {
+  0%,
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

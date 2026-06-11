@@ -1,84 +1,69 @@
-import React from "react";
 import { useForm, ValidationError } from '@formspree/react';
+import { PROFILE } from '../data/profile';
+import PixelButton from '../pixel-system/components/PixelButton';
 
-function Contact() {
+export default function Contact() {
+  const [state, handleSubmit] = useForm('xzbnvjlr');
 
-    const [state, handleSubmit] = useForm("xzbnvjlr");
-
-    const contactForm = (
-        <form className="card-form" onSubmit={handleSubmit}>
-            <div className="input">
-                <input
-                    placeholder="John Doe"
-                    className="input-field"
-                    id="name"
-                    type="text"
-                    name="name"
-                    role="input field for your name"
-                />
-                <label htmlFor="email" className="input-label">
-                    Name:
-                </label>
-                <ValidationError 
-                    prefix="Message" 
-                    field="message"
-                    errors={state.errors}
-                />
-            </div>
-            <div className="input">
-                <input
-                    placeholder="example@something.com"
-                    className="input-field"
-                    id="email"
-                    type="email" 
-                    name="email"
-                    role="input field for your email address"
-                />
-                <label htmlFor="email" className="input-label">
-                    Email Address:
-                </label>
-                <ValidationError 
-                    prefix="Email" 
-                    field="email"
-                    errors={state.errors}
-                />
-            </div>
-            <div className="input">
-                <textarea
-                    placeholder="Your message here"
-                    className="input-field"
-                    id="message"
-                    type="text"
-                    name="message"
-                    role="text area input for your message to me"
-                />
-                <ValidationError 
-                    prefix="Message" 
-                    field="message"
-                    errors={state.errors}
-                />
-                <label htmlFor="email" className="input-label">
-                    Message:
-                </label>
-            </div>
-            <div className=".action">
-                <button className="action-button" type="submit" disabled={state.submitting}>
-                    Send
-                </button>
-            </div>
-        </form>
-    )
-
+  if (state.succeeded) {
     return (
-        <div className="contact-card">
-            <div className="card-heading">
-                <h2/>Let's stay in touch!<h2/>
-                <small>Phone: 206-755-2605
-                ||   Email: danielrice5627@gmail.com</small>
-            </div>
-            { state.succeeded ? <p className="thank-you-message"><b>Thanks for Reaching out! I'll get back to you as soon as I can.</b></p> : contactForm }
+      <section className="page contact">
+        <div className="pixel-panel contact-panel">
+          <h1 className="panel-heading">&gt; TRANSMISSION RECEIVED</h1>
+          <p className="bio-text">
+            Thanks for reaching out! I&apos;ll get back to you as soon as I can.
+          </p>
         </div>
-    )
-}
+      </section>
+    );
+  }
 
-export default Contact;
+  return (
+    <section className="page contact">
+      <div className="pixel-panel contact-panel">
+        <h1 className="panel-heading">
+          &gt; SEND_TRANSMISSION<span className="cursor">█</span>
+        </h1>
+        <p className="contact-meta">
+          EMAIL: {PROFILE.email} · PHONE: {PROFILE.phone}
+        </p>
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <label className="form-label" htmlFor="name">
+            NAME
+          </label>
+          <input className="form-input" id="name" name="name" type="text" placeholder="JANE DOE" required />
+
+          <label className="form-label" htmlFor="email">
+            EMAIL
+          </label>
+          <input
+            className="form-input"
+            id="email"
+            name="email"
+            type="email"
+            placeholder="YOU@EXAMPLE.COM"
+            required
+          />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
+
+          <label className="form-label" htmlFor="message">
+            MESSAGE
+          </label>
+          <textarea
+            className="form-input"
+            id="message"
+            name="message"
+            rows={6}
+            placeholder="TYPE YOUR MESSAGE..."
+            required
+          />
+          <ValidationError prefix="Message" field="message" errors={state.errors} />
+
+          <PixelButton type="submit" variant="cyan" disabled={state.submitting}>
+            {state.submitting ? 'TRANSMITTING...' : 'TRANSMIT ▸'}
+          </PixelButton>
+        </form>
+      </div>
+    </section>
+  );
+}
