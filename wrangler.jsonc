@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Must match the Worker name in the Cloudflare dashboard
+  "name": "portfolio",
+  "compatibility_date": "2026-06-11",
+  // Assets-only deploy: no server code, just the Vite build output.
+  // single-page-application makes /projects etc. serve index.html on refresh.
+  "assets": {
+    "directory": "./build",
+    "not_found_handling": "single-page-application"
+  }
+}
